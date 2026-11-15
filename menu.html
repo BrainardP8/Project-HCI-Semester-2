@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mamma Mia Ristorante</title>
+    <link rel="styleSheet" href="CSS/style.css" />
+    <script defer src="js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ba9abfa689.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navBar">
+      <div class="logo">
+        <h2>Mamma Mia Ristorante</h2>
+      </div>
+      <ul class="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+
+    <div id="menuBanner"><h1>OUR MENU</h1></div>
+
+    <div id="menuNav">
+      <button
+        id="btnAppetizers"
+        class="catBtn active"
+        onclick="openMenu('appetizers')"
+      >
+        APPETIZERS
+      </button>
+      <button id="btnPizza" class="catBtn" onclick="openMenu('pizza')">
+        PIZZA
+      </button>
+      <button id="btnPasta" class="catBtn" onclick="openMenu('pasta')">
+        PASTA & RISOTTO
+      </button>
+      <button id="btnDesserts" class="catBtn" onclick="openMenu('desserts')">
+        DESSERTS
+      </button>
+      <button id="btnDrinks" class="catBtn" onclick="openMenu('drinks')">
+        DRINKS
+      </button>
+    </div>
+
+    <div class="menuContainer">
+      <div id="appetizers" class="menuSection">
+        <h1>Appetizers</h1>
+        <p>
+          The perfect prelude to your Italian feast. Handcrafted bites made from
+          the freshest ingredients.
+        </p>
+
+        <div class="menuBox">
+          <div class="menuList" onclick="addToCart('Bruschetta Classica', 9)">
+            <h3>Bruschetta Classica</h3>
+            <img
+              src="fotoProject/Classic Bruschetta (Easy Summer Appetizer Idea!).jpg"
+              class="imgCard"
+              alt="Picture of Bruschetta"
+            />
+            <p>
+              Toasted artisanal bread topped with fresh tomatoes, garlic, basil,
+              and extra virgin olive oil.
+            </p>
+            <p class="price">$9</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Calamari Fritti', 9)">
+            <h3>Calamari Fritti</h3>
+            <img
+              src="fotoProject/Fried Calamari Recipe with a Buttermilk Variation.jpg"
+              alt="Picture of Calamari Fritti"
+              class="imgCard"
+            />
+            <p>
+              Crispy, golden-fried calamari rings served with our signature
+              super zesty marinara dip. Make it more zestier than ever!
+            </p>
+            <p class="price">$9</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Caprese Salad', 9)">
+            <h3>Caprese Salad</h3>
+            <img
+              src="fotoProject/Caprese Salad 🥗🍅.jpg"
+              alt="Picture of Caprese Salad"
+              class="imgCard"
+            />
+            <p>
+              Fresh buffalo mozzarella, ripe tomatoes, and sweet basil leaves
+              drizzled with balsamic reduction.
+            </p>
+            <p class="price">$9</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Arancini al Tartufo', 12)">
+            <h3>Arancini al Tartufo</h3>
+            <img
+              src="fotoProject/Arancini - Sugar Spun Run.jpg"
+              alt="Picture of Arancini al Tartufo"
+              class="imgCard"
+            />
+            <p>
+              Crispy golden risotto balls infused with black truffle and stuffed
+              with melting mozzarella.
+            </p>
+            <p class="price">$12</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Carpaccio di Manzo', 12)">
+            <h3>Carpaccio di Manzo</h3>
+            <img
+              src="fotoProject/download (1).jpg"
+              alt="Picture of Carpaccio di Manzo"
+              class="imgCard"
+            />
+            <p>
+              Thinly sliced raw beef tenderloin drizzled with extra virgin olive
+              oil, lemon zest, and shaved parmesan.
+            </p>
+            <p class="price">$12</p>
+          </div>
+          <div
+            class="menuList"
+            onclick="addToCart('Focaccia al Rosmarino', 12)"
+          >
+            <h3>Focaccia al Rosmarino</h3>
+            <img
+              src="fotoProject/Rosemary Focaccia_ Irresistibly Fluffy and Flavorful!.jpg"
+              alt="Picture of Focaccia al Rosmarino"
+              class="imgCard"
+            />
+            <p>
+              Warm, house-baked Italian flatbread seasoned with fresh rosemary,
+              sea salt, and roasted garlic.
+            </p>
+            <p class="price">$12</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="pizza" class="menuSection hidden">
+        <h1>Pizza</h1>
+        <p>
+          Authentic wood-fired perfection. Blistered crusts, rich San Marzano
+          tomato sauce, and melting mozzarella.
+        </p>
+
+        <div class="menuBox">
+          <div class="menuList" onclick="addToCart('Pepperoni Pizza', 20)">
+            <h3>Pepperoni Pizza</h3>
+            <img
+              src="fotoProject/Pizza Pepperoni Tomatoes Cheese Herbs Stock Photo _ Adobe Stock.jpg"
+              alt="Picture of Pepperoni Pizza"
+              class="imgCard"
+            />
+            <p>
+              Wood-fired perfection topped with our top-notch tomato, premium
+              pepperoni, and melted mozzarella.
+            </p>
+            <p class="price">$20</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Tuna Pizza', 20)">
+            <h3>Tuna Pizza</h3>
+            <img
+              src="fotoProject/Tuna Dinner ideas_ 30 Minute High Protein Tuna Pizza Recipe.jpg"
+              alt="Picture of Tuna Pizza"
+              class="imgCard"
+            />
+            <p>
+              A taste of the Italian coast featuring savory tuna, fresh red
+              onions, and mozzarella on a crispy crust.
+            </p>
+            <p class="price">$20</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Quattro Formaggi', 20)">
+            <h3>Quattro Formaggi</h3>
+            <img
+              src="fotoProject/Quattro Formaggi Pizza.jpg"
+              alt="Picture of Quattro Formaggi"
+              class="imgCard"
+            />
+            <p>
+              A rich, wood-fired white pizza blending premium mozzarella,
+              gorgonzola, parmesan, and creamy ricotta.
+            </p>
+            <p class="price">$20</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Margherita D.O.P', 22)">
+            <h3>Margherita D.O.P</h3>
+            <img
+              src="fotoProject/Pizza Margherita Recipe.jpg"
+              alt="Picture of Margherita D.O.P"
+              class="imgCard"
+            />
+            <p>
+              The absolute classic. San Marzano tomato sauce, fresh mozzarella
+              di bufala, and sweet basil leaves.
+            </p>
+            <p class="price">$22</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Truffle & Mushroom', 22)">
+            <h3>Truffle & Mushroom</h3>
+            <img
+              src="fotoProject/Try Truffled Mushroom - 10_ from Pizza Studio (Kingston) on Uber Eats and use my code for a discount on your first order_ eats-kassandrag810ui.jpg"
+              alt="Picture of Truffle & Mushroom Pizza"
+              class="imgCard"
+            />
+            <p>
+              Earthy wild mushrooms, decadent white truffle oil, roasted garlic
+              paste, and mozzarella on a thin crust.
+            </p>
+            <p class="price">$22</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Prosciutto e Rucola', 22)">
+            <h3>Prosciutto e Rucola</h3>
+            <img
+              src="fotoProject/Authentic Prosciutto Pizza _ How To Make In Easiest Ways!.jpg"
+              alt="Picture of Prosciutto e Rucola"
+              class="imgCard"
+            />
+            <p>
+              Freshly baked crust topped with thinly sliced savory prosciutto,
+              peppery arugula, and shaved parmesan.
+            </p>
+            <p class="price">$22</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="pasta" class="menuSection hidden">
+        <h1>Pasta & Risotto</h1>
+        <p>
+          The heart of Italian comfort. Al dente pasta and slow-simmered risotto
+          elegantly tossed in our house-made sauces.
+        </p>
+
+        <div class="menuBox">
+          <div class="menuList" onclick="addToCart('Spaghetti Bolognese', 20)">
+            <h3>Spaghetti Bolognese</h3>
+            <img
+              src="fotoProject/Spaghetti Bolognese.jpg"
+              alt="Picture of Spaghetti Bolognese"
+              class="imgCard"
+            />
+            <p>
+              Al dente pasta tossed in a rich, slow-cooked beef ragù, infused
+              with traditional Italian herbs.
+            </p>
+            <p class="price">$20</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Parmesan Fusilli', 20)">
+            <h3>Parmesan Fusilli</h3>
+            <img
+              src="fotoProject/Fusilli alla Vodka with Basil and Parmesan - Never Not Hungry.jpg"
+              alt="Picture of Parmesan Fusilli"
+              class="imgCard"
+            />
+            <p>
+              Spiral pasta coated in a luxurious, creamy Parmesan sauce,
+              finished with a sprinkle of Mediterranean herbs.
+            </p>
+            <p class="price">$20</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Creamy Risotto', 20)">
+            <h3>Creamy Risotto</h3>
+            <img
+              src="fotoProject/Creamy Garlic Herb Chicken Risotto_ Delicious 1-Pot Dinner.jpg"
+              alt="Picture of Creamy Risotto"
+              class="imgCard"
+            />
+            <p>
+              Slow-simmered Arborio rice in a velvety cheese broth, perfectly
+              paired with tender, savory cuts.
+            </p>
+            <p class="price">$20</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Lasagna alla Nonna', 22)">
+            <h3>Lasagna alla Nonna</h3>
+            <img
+              src="fotoProject/lasagnaPic.jpg"
+              alt="Picture of Lasagna alla Nonna"
+              class="imgCard"
+            />
+            <p>
+              Layers of handmade pasta, rich meat sauce, and creamy béchamel,
+              baked to golden perfection.
+            </p>
+            <p class="price">$22</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Truffle Ravioli', 22)">
+            <h3>Truffle Ravioli</h3>
+            <img
+              src="fotoProject/Mushroom Ravioli with Truffle Oil _ Elegant Dinner Idea.jpg"
+              alt="Picture of Truffle Ravioli"
+              class="imgCard"
+            />
+            <p>
+              Handmade pasta pockets filled with wild mushrooms and ricotta,
+              bathed in a light truffle cream sauce.
+            </p>
+            <p class="price">$22</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Penne Arrabbiata', 22)">
+            <h3>Penne Arrabbiata</h3>
+            <img
+              src="fotoProject/Arrabiata Sauce.jpg"
+              alt="Picture of Penne Arrabbiata"
+              class="imgCard"
+            />
+            <p>
+              A spicy and bold tomato sauce with garlic, red chili peppers, and
+              fresh parsley over al dente penne.
+            </p>
+            <p class="price">$22</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="desserts" class="menuSection hidden">
+        <h1>Desserts</h1>
+        <p>
+          A sweet conclusion to your dining experience. Indulge in our decadent,
+          handcrafted classic Italian dolci.
+        </p>
+
+        <div class="menuBox">
+          <div class="menuList" onclick="addToCart('Classic Tiramisu', 10)">
+            <h3>Classic Tiramisu</h3>
+            <img
+              src="fotoProject/tiramisuCake.jpg"
+              alt="Picture of Tiramisu Cake"
+              class="imgCard"
+            />
+            <p>
+              Layers of espresso-soaked ladyfingers and rich mascarpone cream,
+              lightly dusted with premium cocoa.
+            </p>
+            <p class="price">$10</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Vanilla Panna Cotta', 10)">
+            <h3>Vanilla Panna Cotta</h3>
+            <img
+              src="fotoProject/Vanilla Panna Cotta with Raspberry Coulis 🍮🍇 _ Smooth and Elegant Dessert Recipe.jpg"
+              alt="Picture of Vanilla Panna Cotta"
+              class="imgCard"
+            />
+            <p>
+              Silky, chilled Italian cream dessert served with a vibrant mixed
+              berry compote and fresh mint.
+            </p>
+            <p class="price">$10</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Gelato Artigianale', 10)">
+            <h3>Gelato Artigianale</h3>
+            <img
+              src="fotoProject/Gelato.jpg"
+              alt="Picture of Gelato Artigianale"
+              class="imgCard"
+            />
+            <p>
+              Three scoops of our handcrafted, authentic Italian ice cream.
+              Perfectly sweet and refreshingly cold.
+            </p>
+            <p class="price">$10</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Cannoli Siciliani', 8)">
+            <h3>Cannoli Siciliani</h3>
+            <img
+              src="fotoProject/CANNOLI SICILIANI - Ricetta originale passo passo con video.jpg"
+              alt="Picture of Cannoli Siciliani"
+              class="imgCard"
+            />
+            <p>
+              Crispy pastry shells filled with a sweet, creamy ricotta filling,
+              chocolate chips, and crushed pistachios.
+            </p>
+            <p class="price">$8</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Chocolate Fondant', 8)">
+            <h3>Chocolate Fondant</h3>
+            <img
+              src="fotoProject/Brownie Fondant au Chocolat Noir Ultra Moelleux_ Recette Facile et Irrésistible 🍫.jpg"
+              alt="Picture of Chocolate Fondant"
+              class="imgCard"
+            />
+            <p>
+              A decadent warm chocolate cake with a molten center, served with a
+              scoop of Madagascar vanilla gelato.
+            </p>
+            <p class="price">$8</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Affogato al Caffè', 8)">
+            <h3>Affogato al Caffè</h3>
+            <img
+              src="fotoProject/Classic Italian Hot Espresso Affogato Recipe.jpg"
+              alt="Picture of Affogato al Caffè"
+              class="imgCard"
+            />
+            <p>
+              A simple yet elegant dessert featuring a scoop of vanilla gelato
+              "drowned" in a shot of hot espresso.
+            </p>
+            <p class="price">$8</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="drinks" class="menuSection hidden">
+        <h1>Drinks</h1>
+        <p>
+          Carefully curated beverages to complement your meal, from refreshing
+          Italian blends to our signature espresso.
+        </p>
+
+        <div class="menuBox">
+          <div class="menuList" onclick="addToCart('Amalfi Lemonade', 4)">
+            <h3>Amalfi Lemonade</h3>
+            <img
+              src="fotoProject/Classic Lemon Lemonade Recipe _ The Ultimate Summer Drink.jpg"
+              alt="Picture of Amalfi Lemonade"
+              class="imgCard"
+            />
+            <p>
+              Refreshing and tart, handcrafted with freshly squeezed Amalfi
+              lemons, mint, and sparkling mineral water.
+            </p>
+            <p class="price">$4</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Espresso Romano', 4)">
+            <h3>Espresso Romano</h3>
+            <img
+              src="fotoProject/Espresso Romano.jpg"
+              alt="Picture of Espresso Romano"
+              class="imgCard"
+            />
+            <p>
+              A bold, aromatic shot of dark roasted Italian espresso served with
+              a twist of fresh lemon peel.
+            </p>
+            <p class="price">$4</p>
+          </div>
+          <div class="menuList" onclick="addToCart('San Pellegrino', 4)">
+            <h3>San Pellegrino</h3>
+            <img
+              src="fotoProject/San Pellegrino _ Italian Sparkling Elegance.jpg"
+              alt="Picture of San Pellegrino"
+              class="imgCard"
+            />
+            <p>
+              Premium sparkling natural mineral water sourced straight from the
+              Italian Alps, served chilled.
+            </p>
+            <p class="price">$4</p>
+          </div>
+          <div
+            class="menuList"
+            onclick="addToCart('Peach Bellini Mocktail', 6)"
+          >
+            <h3>Peach Bellini Mocktail</h3>
+            <img
+              src="fotoProject/Refreshing Dry January Peach Bellini Mocktail Recipes.jpg"
+              alt="Picture of Peach Bellini Mocktail"
+              class="imgCard"
+            />
+            <p>
+              A sophisticated blend of white peach purée and sparkling cider,
+              garnished with a fresh peach slice.
+            </p>
+            <p class="price">$6</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Strawberry Basil Soda', 6)">
+            <h3>Strawberry Basil Soda</h3>
+            <img
+              src="fotoProject/Strawberry Soda Recipe with Basil - Striped Spatula.jpg"
+              alt="Picture of Strawberry Basil Soda"
+              class="imgCard"
+            />
+            <p>
+              Hand-muddled fresh strawberries and basil leaves topped with
+              sparkling soda for a crisp, botanical finish.
+            </p>
+            <p class="price">$6</p>
+          </div>
+          <div class="menuList" onclick="addToCart('Hot Cappuccino', 6)">
+            <h3>Hot Cappuccino</h3>
+            <img
+              src="fotoProject/Cappuccino.jpg"
+              alt="Picture of Hot Cappuccino"
+              class="imgCard"
+            />
+            <p>
+              Rich, full-bodied espresso topped with a thick layer of creamy
+              foamed milk and a dusting of cinnamon.
+            </p>
+            <p class="price">$6</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mainFooter">
+      <div class="footerContent">
+        <div class="footerHead"><h1>Mamma Mia Ristorante</h1></div>
+        <div class="footerLeft">
+          <p>Jl. Kebon Hitam No. 4, Menteng Jakarta Pusat, 10340</p>
+          <p><strong>Monday - Friday :</strong> 11:00 AM - 10:00 PM</p>
+          <p><strong>Saturday - Sunday :</strong> 10:00 AM - 11:00 PM</p>
+        </div>
+
+        <div class="footerRight">
+          <ul class="socMed">
+            <li><i class="fa-brands fa-instagram"></i> @mammamia.ristorante</li>
+            <li>
+              <i class="fa-brands fa-facebook"></i> Mamma Mia Ristorante
+              Official
+            </li>
+            <li><i class="fa-solid fa-phone"></i> +62 877 9124 5123</li>
+            <li><i class="fa-solid fa-envelope"></i> ciaobella@mammamia.com</li>
+          </ul>
+        </div>
+
+        <div class="bottFooter">
+          <p>© 2026 Mamma Mia Ristorante. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="cartPopUp" class="popUpOverlay hidden">
+      <div class="popUpBox">
+        <button class="closeBtn" onclick="closePopUp()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 id="popUpTitle">Perfect choice.<br />Added to your order.</h2>
+        <p id="popUpItemName" class="popUpItem">Item Name</p>
+        <div class="qtyControl">
+          <button onclick="updateQty(-1)">-</button>
+          <span id="popUpQty">1</span>
+          <button onclick="updateQty(1)">+</button>
+        </div>
+        <div class="popUpActions">
+          <button class="btnDark" onclick="closePopUp()">order more</button>
+          <button class="btnDark" onclick="goToCheckout()">check out</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

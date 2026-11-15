@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mamma Mia Ristorante</title>
+    <link rel="styleSheet" href="CSS/style.css" />
+    <script defer src="js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ba9abfa689.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navBar">
+      <div class="logo">
+        <h2>Mamma Mia Ristorante</h2>
+      </div>
+      <ul class="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero">
+      <div class="midText">
+        <h1>Mamma Mia Ristorante</h1>
+        <p>Classic Taste, Fantastic Experience.</p>
+        <button id="orderNow" onclick="goMenu()">Order Now</button>
+      </div>
+    </section>
+
+    <section id="chefSignature">
+      <div class="textChef">
+        <h1>Chef's Signature</h1>
+        <p>
+          The pride of Mamma Mia. Experience the authentic taste of Italy
+          through our crowd-favorite culinary masterpieces.
+        </p>
+      </div>
+
+      <div class="menuCard">
+        <div class="group">
+          <div class="card">
+            <img
+              src="fotoProject/Pizza Pepperoni Tomatoes Cheese Herbs Stock Photo _ Adobe Stock.jpg"
+              alt="Picture of Pepperoni Pizza"
+              class="imgCard"
+            />
+            <h3>Pepperoni Pizza</h3>
+            <p>
+              Wood-fired perfection topped with our secret tomato sauce, premium
+              pepperoni, and melted mozzarella.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Creamy Garlic Herb Chicken Risotto_ Delicious 1-Pot Dinner.jpg"
+              alt="Picture of Risotto"
+              class="imgCard"
+            />
+            <h3>Creamy Risotto</h3>
+            <p>
+              Slow-simmered Arborio rice in a velvety cheese broth, perfectly
+              paired with tender, savory cuts.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Spaghetti Bolognese.jpg"
+              alt="Picture of Spaghetti Bolognese"
+              class="imgCard"
+            />
+            <h3>Spaghetti Bolognese</h3>
+            <p>
+              Al dente pasta tossed in a rich, slow-cooked beef ragù, infused
+              with traditional Italian herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Fusilli alla Vodka with Basil and Parmesan - Never Not Hungry.jpg"
+              alt="Picture of Parmesan Fusilli"
+              class="imgCard"
+            />
+            <h3>Parmesan Fusilli</h3>
+            <p>
+              Spiral pasta coated in a luxurious, creamy Parmesan sauce,
+              finished with a sprinkle of Mediterranean herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Tuna Dinner ideas_ 30 Minute High Protein Tuna Pizza Recipe.jpg"
+              alt="Picture of Tuna Pizza"
+              class="imgCard"
+            />
+            <h3>Tuna Pizza</h3>
+            <p>
+              A taste of the Italian coast featuring savory tuna, fresh red
+              onions, and mozzarella on a crispy crust.
+            </p>
+          </div>
+
+          <div class="card">
+            <img
+              src="fotoProject/Pizza Pepperoni Tomatoes Cheese Herbs Stock Photo _ Adobe Stock.jpg"
+              alt="Picture of Pepperoni Pizza"
+              class="imgCard"
+            />
+            <h3>Pepperoni Pizza</h3>
+            <p>
+              Wood-fired perfection topped with our secret tomato sauce, premium
+              pepperoni, and melted mozzarella.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Creamy Garlic Herb Chicken Risotto_ Delicious 1-Pot Dinner.jpg"
+              alt="Picture of Creamy Risotto"
+              class="imgCard"
+            />
+            <h3>Creamy Risotto</h3>
+            <p>
+              Slow-simmered Arborio rice in a velvety cheese broth, perfectly
+              paired with tender, savory cuts.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Spaghetti Bolognese.jpg"
+              alt="Picture of Spaghetti Bolognese"
+              class="imgCard"
+            />
+            <h3>Spaghetti Bolognese</h3>
+            <p>
+              Al dente pasta tossed in a rich, slow-cooked beef ragù, infused
+              with traditional Italian herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Fusilli alla Vodka with Basil and Parmesan - Never Not Hungry.jpg"
+              alt="Picture of Parmesan Fusilli"
+              class="imgCard"
+            />
+            <h3>Parmesan Fusilli</h3>
+            <p>
+              Spiral pasta coated in a luxurious, creamy Parmesan sauce,
+              finished with a sprinkle of Mediterranean herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Tuna Dinner ideas_ 30 Minute High Protein Tuna Pizza Recipe.jpg"
+              alt="Picture of Tuna Pizza"
+              class="imgCard"
+            />
+            <h3>Tuna Pizza</h3>
+            <p>
+              A taste of the Italian coast featuring savory tuna, fresh red
+              onions, and mozzarella on a crispy crust.
+            </p>
+          </div>
+        </div>
+
+        <div aria-hidden="true" class="group">
+          <div class="card">
+            <img
+              src="fotoProject/Pizza Pepperoni Tomatoes Cheese Herbs Stock Photo _ Adobe Stock.jpg"
+              alt="Picture of Pepperoni Pizza"
+              class="imgCard"
+            />
+            <h3>Pepperoni Pizza</h3>
+            <p>
+              Wood-fired perfection topped with our secret tomato sauce, premium
+              pepperoni, and melted mozzarella.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Creamy Garlic Herb Chicken Risotto_ Delicious 1-Pot Dinner.jpg"
+              alt="Picture of Creamy Risotto"
+              class="imgCard"
+            />
+            <h3>Creamy Risotto</h3>
+            <p>
+              Slow-simmered Arborio rice in a velvety cheese broth, perfectly
+              paired with tender, savory cuts.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Spaghetti Bolognese.jpg"
+              alt="Picture of Spaghetti Bolognese"
+              class="imgCard"
+            />
+            <h3>Spaghetti Bolognese</h3>
+            <p>
+              Al dente pasta tossed in a rich, slow-cooked beef ragù, infused
+              with traditional Italian herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Fusilli alla Vodka with Basil and Parmesan - Never Not Hungry.jpg"
+              alt="Picture of Parmesan Fusilli"
+              class="imgCard"
+            />
+            <h3>Parmesan Fusilli</h3>
+            <p>
+              Spiral pasta coated in a luxurious, creamy Parmesan sauce,
+              finished with a sprinkle of Mediterranean herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Tuna Dinner ideas_ 30 Minute High Protein Tuna Pizza Recipe.jpg"
+              alt="Picture of Tuna Pizza"
+              class="imgCard"
+            />
+            <h3>Tuna Pizza</h3>
+            <p>
+              A taste of the Italian coast featuring savory tuna, fresh red
+              onions, and mozzarella on a crispy crust.
+            </p>
+          </div>
+
+          <div class="card">
+            <img
+              src="fotoProject/Pizza Pepperoni Tomatoes Cheese Herbs Stock Photo _ Adobe Stock.jpg"
+              alt="Picture of Pepperoni Pizza"
+              class="imgCard"
+            />
+            <h3>Pepperoni Pizza</h3>
+            <p>
+              Wood-fired perfection topped with our secret tomato sauce, premium
+              pepperoni, and melted mozzarella.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Creamy Garlic Herb Chicken Risotto_ Delicious 1-Pot Dinner.jpg"
+              alt="Picture of Creamy Risotto"
+              class="imgCard"
+            />
+            <h3>Creamy Risotto</h3>
+            <p>
+              Slow-simmered Arborio rice in a velvety cheese broth, perfectly
+              paired with tender, savory cuts.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Spaghetti Bolognese.jpg"
+              alt="Picture of Spaghetti Bolognese"
+              class="imgCard"
+            />
+            <h3>Spaghetti Bolognese</h3>
+            <p>
+              Al dente pasta tossed in a rich, slow-cooked beef ragù, infused
+              with traditional Italian herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Fusilli alla Vodka with Basil and Parmesan - Never Not Hungry.jpg"
+              alt="Picture of Parmesan Fusilli"
+              class="imgCard"
+            />
+            <h3>Parmesan Fusilli</h3>
+            <p>
+              Spiral pasta coated in a luxurious, creamy Parmesan sauce,
+              finished with a sprinkle of Mediterranean herbs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="fotoProject/Tuna Dinner ideas_ 30 Minute High Protein Tuna Pizza Recipe.jpg"
+              alt="Picture of Tuna Pizza"
+              class="imgCard"
+            />
+            <h3>Tuna Pizza</h3>
+            <p>
+              A taste of the Italian coast featuring savory tuna, fresh red
+              onions, and mozzarella on a crispy crust.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button id="menuButton" onclick="goMenu()">Our Menu</button>
+    </section>
+
+    <section id="legacy">
+      <div class="textLegacy">
+        <h1>A Legacy of Flavor, Crafted by Time</h1>
+        <p>
+          It all started with a simple philosophy held by our founder, Komang
+          Gde. The finest meals are born from patience, passion, and a profound
+          respect for ingredients. Inspired by the soulful kitchens of Italy,
+          Komang established Mamma Mia Ristorante to bring the authentic essence
+          of the Mediterranean straight to your table. Today, we continue to
+          honor that legacy crafting wood-fired pizzas and slow-simmered pastas
+          that guarantee a Classic Taste, wrapped in a truly Fantastic
+          Experience.
+        </p>
+      </div>
+    </section>
+
+    <footer class="mainFooter footer-snap">
+      <div class="footerContent">
+        <div class="footerHead"><h1>Mamma Mia Ristorante</h1></div>
+        <div class="footerLeft">
+          <p>Jl. Kebon Hitam No. 4, Menteng Jakarta Pusat, 10340</p>
+          <p><strong>Monday - Friday :</strong> 11:00 AM - 10:00 PM</p>
+          <p><strong>Saturday - Sunday :</strong> 10:00 AM - 11:00 PM</p>
+        </div>
+
+        <div class="footerRight">
+          <ul class="socMed">
+            <li><i class="fa-brands fa-instagram"></i> @mammamia.ristorante</li>
+            <li>
+              <i class="fa-brands fa-facebook"></i> Mamma Mia Ristorante
+              Official
+            </li>
+            <li><i class="fa-solid fa-phone"></i> +62 877 9124 5123</li>
+            <li><i class="fa-solid fa-envelope"></i> ciaobella@mammamia.com</li>
+          </ul>
+        </div>
+
+        <div class="bottFooter">
+          <p>© 2026 Mamma Mia Ristorante. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

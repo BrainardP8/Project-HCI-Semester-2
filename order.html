@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mamma Mia Ristorante</title>
+    <link rel="styleSheet" href="CSS/style.css" />
+    <script defer src="js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ba9abfa689.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navBar">
+      <div class="logo">
+        <h2>Mamma Mia Ristorante</h2>
+      </div>
+      <ul class="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+    <div>
+      <form class="orderContainer" onsubmit="return validateForm(event);">
+        <div class="leftColumn">
+          <h1>Checkout Details</h1>
+          <h2>Order Type</h2>
+          <div class="orderType">
+            <input type="radio" id="pickup" name="orderType" value="Pick-Up" />
+            <label for="pickup">Pick-Up</label>
+            <input
+              type="radio"
+              id="delivery"
+              name="orderType"
+              value="Delivery"
+            />
+            <label for="delivery">Delivery</label>
+          </div>
+          <h2>Contact Information</h2>
+          <div class="contactType">
+            <input type="text" id="fullName" placeholder="  Full Name" />
+
+            <input type="tel" id="phoneNumber" placeholder="  Phone Number" />
+          </div>
+          <div class="addressBox hidden" id="addressContainer">
+            <textarea
+              id="address"
+              rows="4"
+              placeholder="Enter your full delivery address and special instructions here..."
+            ></textarea>
+          </div>
+
+          <h2>Add Ons</h2>
+          <div class="addOns">
+            <input type="checkbox" id="utensils" value="Utensils" />
+            <label for="utensils">Send Eating Utensils (Free)</label>
+            <br />
+            <input type="checkbox" id="mozzarella" value="Extra Mozzarella" />
+            <label for="mozzarella">Extra Mozzarella (Free)</label>
+            <br />
+            <input
+              type="checkbox"
+              id="chilliSauce"
+              value="Extra Chilli Sauce"
+            />
+            <label for="chilliSauce">Extra Chilli Sauce (Free)</label>
+          </div>
+          <h2>Payment Method</h2>
+          <div class="methodBox">
+            <div class="method">
+              <button type="button" id="btnEwallet" class="tabBtn">
+                E-Wallet
+              </button>
+              <button type="button" id="btnTransfer" class="tabBtn activeTab">
+                Transfer Bank
+              </button>
+            </div>
+            <div class="methodOptions" id="bankMenu">
+              <input
+                type="radio"
+                id="seabank"
+                name="paymentOption"
+                value="Sea Bank"
+              />
+              <label for="seabank">Sea Bank</label>
+
+              <input type="radio" id="bca" name="paymentOption" value="BCA" />
+              <label for="bca">BCA</label>
+
+              <input
+                type="radio"
+                id="blubca"
+                name="paymentOption"
+                value="BLU BCA"
+              />
+              <label for="blubca">BLU BCA</label>
+            </div>
+
+            <div class="methodOptions hidden" id="ewalletMenu">
+              <input type="radio" id="ovo" name="paymentOption" value="OVO" />
+              <label for="ovo">OVO</label>
+
+              <input
+                type="radio"
+                id="gopay"
+                name="paymentOption"
+                value="GoPay"
+              />
+              <label for="gopay">GoPay</label>
+
+              <input
+                type="radio"
+                id="shopeepay"
+                name="paymentOption"
+                value="ShopeePay"
+              />
+              <label for="shopeepay">ShopeePay</label>
+            </div>
+          </div>
+          <br />
+        </div>
+
+        <div class="rightColumn">
+          <h1>Your Order Summary</h1>
+
+          <ul id="cart-items" class="order-list"></ul>
+
+          <div class="total-section">
+            <h2>Grand Total : <span id="total-price">0</span> $</h2>
+          </div>
+
+          <div class="action-buttons">
+            <button type="button" class="clearButton" onclick="clearCart()">
+              Clear Cart
+            </button>
+            <button type="submit" class="payButton">Pay</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="mainFooter">
+      <div class="footerContent">
+        <div class="footerHead"><h1>Mamma Mia Ristorante</h1></div>
+        <div class="footerLeft">
+          <p>Jl. Kebon Hitam No. 4, Menteng Jakarta Pusat, 10340</p>
+          <p><strong>Monday - Friday :</strong> 11:00 AM - 10:00 PM</p>
+          <p><strong>Saturday - Sunday :</strong> 10:00 AM - 11:00 PM</p>
+        </div>
+
+        <div class="footerRight">
+          <ul class="socMed">
+            <li><i class="fa-brands fa-instagram"></i> @mammamia.ristorante</li>
+            <li>
+              <i class="fa-brands fa-facebook"></i> Mamma Mia Ristorante
+              Official
+            </li>
+            <li><i class="fa-solid fa-phone"></i> +62 877 9124 5123</li>
+            <li><i class="fa-solid fa-envelope"></i> ciaobella@mammamia.com</li>
+          </ul>
+        </div>
+
+        <div class="bottFooter">
+          <p>© 2026 Mamma Mia Ristorante. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

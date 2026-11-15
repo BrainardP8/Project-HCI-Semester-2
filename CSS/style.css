@@ -1,0 +1,1291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding-top: 80px;
+}
+
+.footer-snap {
+  scroll-snap-align: end;
+}
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: #121212;
+  font-family: "Playfair Display", serif;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.navLinks li a:hover {
+  color: #cc4b25;
+}
+.logo {
+  display: flex;
+  color: white;
+}
+
+#hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../fotoProject/pizzaBg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: white;
+  padding-top: 100px;
+}
+
+.midText {
+  padding: 50px;
+  margin: 0;
+}
+.midText h1 {
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+}
+
+.midText p {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+#orderNow {
+  background-color: #cc4b25;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 15px 40px;
+  margin-top: 16px;
+  font-size: 21px;
+  border-radius: 21px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#orderNow:hover {
+  background-color: #ffffff;
+  color: #cc4b25;
+}
+
+#chefSignature {
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.textChef h1 {
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  color: #cc4b25;
+}
+
+.textChef p {
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.menuCard {
+  margin: 48px auto;
+  margin-bottom: 0px;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  overflow-x: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.menuCard::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: spin 25s infinite linear;
+  padding-right: 20px;
+  flex-shrink: 0;
+}
+.card {
+  flex-shrink: 0;
+  height: 320px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background-color: #242424;
+}
+
+.card h3 {
+  margin-top: 5px;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: normal;
+  color: #cc4b25;
+}
+
+.card p {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  color: #cccccc;
+}
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+.imgCard {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 200px;
+  height: 180px;
+}
+
+#menuButton {
+  background-color: #cc4b25;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  margin-top: 24px;
+  padding: 15px 40px;
+  font-size: 21px;
+  border-radius: 21px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#menuButton:hover {
+  background-color: #ffffff;
+  color: #cc4b25;
+}
+
+#legacy {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../fotoProject/oldPizzaVibe.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: white;
+}
+
+.textLegacy {
+  padding: 50px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#legacy h1 {
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+}
+
+#legacy p {
+  margin-top: 20px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  max-width: 800px;
+  line-height: 1.5;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.mainFooter {
+  background-color: #121212;
+}
+
+.footerContent {
+  font-family: "Montserrat", sans-serif;
+  padding: 0 50px 50px 50px;
+  margin: 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footerHead {
+  text-align: left;
+  flex: none;
+  width: 100%;
+  padding: 0;
+  margin: 20px 0 20px 0;
+}
+
+.footerLeft {
+  text-align: left;
+  flex: 1;
+}
+.footerHead h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+}
+.footerRight {
+  text-align: right;
+  flex: 1;
+}
+
+.socMed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bottFooter {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+#menuBanner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../fotoProject/backgroundForBanner.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 340px;
+  align-content: center;
+}
+
+#menuBanner h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+#menuNav {
+  background-color: #121212;
+  width: 100%;
+  height: 60px;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.catBtn {
+  background: transparent;
+  color: #cccccc;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.catBtn.active,
+.catBtn:hover {
+  background-color: #cc4b25;
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.menuSection {
+  background-color: #f5efe0;
+  width: 100%;
+  padding: 20px 0 100px 0;
+  border-radius: 0;
+}
+.menuSection h1 {
+  color: #121212;
+  font-size: 64px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.menuSection p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #121212;
+}
+
+.menuContainer {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+.menuBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px 200px;
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
+}
+
+.menuList {
+  height: auto;
+  min-height: 260px;
+  width: 260px;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background:
+    linear-gradient(rgba(245, 239, 224, 0.94), rgba(245, 239, 224, 0.94)),
+    rgb(0, 0, 0);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.menuList h3 {
+  text-align: center;
+  color: #121212;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.menuList p {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+.menuList .price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #121212;
+  margin-top: 15px;
+  padding-top: 10px;
+  align-self: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.menuList:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.popUpOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popUpOverlay.hidden {
+  display: none;
+}
+
+.popUpBox {
+  background: #f5efe0;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 450px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #121212;
+  transition: 0.3s;
+}
+
+.closeBtn:hover {
+  color: #cc4b25;
+}
+
+.popUpBox h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: normal;
+  color: #121212;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.popUpItem {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #121212;
+  margin-bottom: 25px;
+}
+
+.qtyControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.qtyControl button {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #121212;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qtyControl button:hover {
+  background: #cc4b25;
+  color: #ffffff;
+}
+
+.qtyControl span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #121212;
+}
+
+.popUpActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.btnDark {
+  flex: 1;
+  background: #121212;
+  color: #ffffff;
+  border: none;
+  padding: 15px 0;
+  border-radius: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnDark:hover {
+  background: #cc4b25;
+  font-weight: bold;
+}
+
+#rewardBanner {
+  background-image: url(../fotoProject/rewardBanner.png);
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 360px;
+  align-content: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#rewardBanner h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+#rewardBanner p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  margin: 20px auto 0;
+  max-width: 400px;
+}
+
+#rewardSection {
+  padding-top: 1px;
+  padding-bottom: 100px;
+  background-image: url(../fotoProject/rewardBGCrop.png);
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+}
+.rewardBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px 200px;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
+}
+
+.rewardList {
+  height: auto;
+  min-height: 260px;
+  width: 260px;
+  padding: 20px;
+  border: 2px solid;
+  border-color: goldenrod;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background:
+    linear-gradient(rgba(245, 239, 224, 0.94), rgba(245, 239, 224, 0.94)),
+    rgb(0, 0, 0);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.rewardList h3 {
+  text-align: center;
+  color: #121212;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  -webkit-text-stroke: 1px goldenrod;
+}
+
+.rewardList p {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-stroke: 1px goldenrod;
+}
+
+.rewardList:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+#aboutUsSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: #f5efe0;
+}
+
+#originFounder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.textContent {
+  flex: 2;
+  text-align: center;
+}
+.originText {
+  text-align: left;
+}
+
+.textContent h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.textContent p {
+  font-family: "Playfair Display", serif;
+}
+hr.seperate {
+  margin: 5px 0px;
+  border: 3px solid goldenrod;
+  border-style: groove;
+}
+.founderText {
+  text-align: right;
+}
+
+.imgCard#picChef,
+.imgCard#picDough {
+  border: 3px solid goldenrod;
+}
+#picChef {
+  height: 280px;
+  object-position: bottom;
+}
+#picDough {
+  height: 280px;
+}
+
+#philosophy {
+  background-color: #121212;
+  height: 300px;
+  margin: 30px;
+  border-radius: 10px;
+  border: 3px solid goldenrod;
+}
+#philosophy h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  -webkit-text-stroke: 1px goldenrod;
+}
+#philosophy hr {
+  margin: 5px 0px;
+  border: 1px solid goldenrod;
+  width: 250px;
+  margin: auto;
+}
+
+#philosophy h3 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #121212;
+}
+#philBox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.philList {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5efe0;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 3px solid goldenrod;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background:
+    linear-gradient(rgba(245, 239, 224, 0.94), rgba(245, 239, 224, 0.94)),
+    rgb(0, 0, 0);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+.philFront {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: opacity 0.3s ease;
+}
+.philBack {
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #2c2c2c;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.philList:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.philList:hover .philFront {
+  opacity: 0;
+}
+
+.philList:hover .philBack {
+  opacity: 1;
+}
+.philList i {
+  color: #121212;
+  font-size: 40px;
+}
+
+.orderContainer {
+  margin-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.leftColumn {
+  margin: 30px;
+  background-color: #f5efe0;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 100%;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.orderType {
+  margin-left: 30px;
+  background-color: #ffffff;
+  width: 300px;
+  height: 100px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.orderType input[type="radio"] {
+  display: none;
+}
+
+.orderType label {
+  background-color: #ffffff;
+  padding: 10px 25px;
+  border: 1px solid #f5efe0;
+  border-radius: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.orderType input[type="radio"]:checked + label {
+  border: 2px solid goldenrod;
+  background-color: #f5efe0;
+  font-weight: bold;
+  color: #121212;
+}
+
+.contactType {
+  display: flex;
+  margin-left: 30px;
+  gap: 15px;
+  max-width: 300px;
+}
+
+#fullName,
+#phoneNumber {
+  flex: 1;
+  border-radius: 6px;
+  border-style: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+.addressBox {
+  margin: 20px 0px 0px 30px;
+}
+#address {
+  border-radius: 6px;
+  border-style: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.addOns {
+  margin-left: 30px;
+  background-color: #ffffff;
+  padding: 10px 25px;
+  width: 300px;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.methodBox {
+  flex-shrink: 0;
+  display: flex;
+  height: 250px;
+  margin-left: 30px;
+  background-color: #ffffff;
+  width: 300px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.method {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.tabBtn {
+  flex: 1;
+  margin-top: 20px;
+  padding: 10px 10px;
+  background-color: #ffffff;
+  border: 1px solid #121212;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabBtn.activeTab {
+  background-color: #f5efe0;
+  border: 1px solid goldenrod;
+  color: #121212;
+  font-weight: bold;
+}
+.methodOptions {
+  margin-left: 30px;
+  background-color: #ffffff;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.methodOptions input[type="radio"] {
+  display: none;
+}
+
+.methodOptions label {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #121212;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.methodOptions label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-right: 12px;
+}
+
+.methodOptions input[type="radio"]:checked + label {
+  border: 2px solid goldenrod;
+  font-weight: bold;
+}
+
+.methodOptions input[type="radio"]:checked + label::before {
+  background-color: goldenrod;
+}
+
+.methodOptions label:hover,
+#btnEwallet:hover,
+#btnTransfer:hover,
+.orderType label:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.rightColumn {
+  margin: 30px;
+  background-color: #f5efe0;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 100%;
+  align-items: center;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+.order-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-list li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.clearButton,
+.payButton {
+  background-color: transparent;
+  color: #cc4b25;
+  border: 2px solid #cc4b25;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.clearButton:hover,
+.payButton:hover {
+  background-color: #cc4b25;
+  color: white;
+}
+.orderContainer h1 {
+  margin-top: 30px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.orderContainer h2 {
+  margin: 20px 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+    height: 100px;
+  }
+
+  .navLinks {
+    gap: 15px;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  #hero {
+    padding-top: 140px;
+  }
+
+  .midText {
+    padding: 20px;
+  }
+
+  .midText h1 {
+    font-size: 38px;
+  }
+
+  .midText p {
+    font-size: 16px;
+  }
+
+  .textChef h1 {
+    font-size: 24px;
+  }
+
+  .textChef p {
+    font-size: 12px;
+  }
+
+  .menuCard {
+    width: 95%;
+  }
+
+  .textLegacy {
+    padding: 40px 20px;
+  }
+
+  #legacy h1 {
+    font-size: 24px;
+  }
+
+  #legacy p {
+    font-size: 12px;
+  }
+
+  .footerContent {
+    padding: 20px 20px 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+  }
+
+  .footerHead,
+  .footerLeft,
+  .footerRight {
+    text-align: center;
+    width: 100%;
+    flex: none;
+  }
+
+  .footerHead h1 {
+    font-size: 24px;
+  }
+
+  .footerLeft {
+    margin-bottom: 30px;
+  }
+
+  .socMed li {
+    justify-content: center;
+  }
+
+  .bottFooter {
+    margin-top: 30px;
+  }
+
+  #menuBanner {
+    height: 250px;
+  }
+
+  #menuBanner h1 {
+    font-size: 42px;
+  }
+
+  #menuNav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  .catBtn {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+  }
+
+  .catBtn.active,
+  .catBtn:hover {
+    margin: 0;
+  }
+
+  .menuSection {
+    padding: 30px 15px 60px 15px;
+  }
+
+  .menuSection h1 {
+    font-size: 42px;
+  }
+
+  .menuSection p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .menuBox {
+    gap: 40px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menuList {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .imgCard {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .popUpBox {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .popUpBox h2 {
+    font-size: 24px;
+  }
+
+  .popUpActions {
+    flex-direction: column;
+  }
+
+  #rewardBanner h1 {
+    font-size: 24px;
+  }
+
+  .rewardBox {
+    gap: 40px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rewardList {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  #originFounder {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .textContent {
+    text-align: center;
+    width: 100%;
+  }
+
+  .originText,
+  .founderText {
+    text-align: center;
+  }
+
+  #picChef,
+  #picDough {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  #philosophy {
+    height: auto;
+    padding: 20px 0;
+    margin: 20px 10px;
+  }
+
+  #philBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .orderContainer {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 90%;
+    margin: 10px;
+    height: auto;
+    padding-bottom: 30px;
+    align-items: center;
+  }
+
+  .orderType,
+  .addOns,
+  .methodBox {
+    width: 90%;
+    max-width: 300px;
+    margin-left: 0;
+  }
+
+  .contactType {
+    flex-direction: column;
+    margin-left: 0;
+    width: 90%;
+    max-width: 300px;
+    gap: 15px;
+  }
+
+  #fullName,
+  #phoneNumber,
+  #address {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .addressBox {
+    margin: 20px 0 0 0;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .methodBox {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .methodOptions {
+    margin-left: 0;
+    width: 90%;
+  }
+}
